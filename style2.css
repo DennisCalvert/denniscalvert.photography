@@ -6,19 +6,26 @@ body {
   font-family: Arial, sans-serif;
   background-color: #fff;
   color: #333;
+  background-color: #212121;
+  color: #837a7a;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 0;
   /* background-color: #f8f8f8; */
   border-bottom: 1px solid #e7e7e7;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+@media (max-width: 1240px) {
+  header {
+    padding: 20px;
+  }
+}
 @media (max-width: 768px) {
   header {
     position: fixed;
@@ -35,6 +42,7 @@ header {
 h1 {
   margin: 0;
   font-size: 2.5em;
+  color: #fff;
 }
 
 nav {
@@ -55,6 +63,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #333;
+  color: #837a7a;
 }
 
 .menu-icon {
@@ -146,6 +155,8 @@ footer {
   padding: 50px 0;
   background-color: #f8f8f8;
   color: #999;
+  background-color: #000000;
+  color: #373737;
 }
 
 #mobile-nav-close-li {
