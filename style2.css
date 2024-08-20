@@ -29,7 +29,7 @@ header {
 @media (max-width: 768px) {
   header {
     position: fixed;
-    background: #fff;
+    background: #222;
     width: 100%;
     z-index: 999;
   }
@@ -64,6 +64,12 @@ nav ul li a {
   text-decoration: none;
   color: #333;
   color: #837a7a;
+}
+
+@media (max-width: 768px) {
+  nav ul li {
+    padding: 20px;
+  }
 }
 
 .menu-icon {
