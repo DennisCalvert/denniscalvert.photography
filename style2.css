@@ -182,6 +182,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #gallery {
+    margin-top: 113px;
+  }
+
   #mobile-nav-close {
     display: block;
   }
