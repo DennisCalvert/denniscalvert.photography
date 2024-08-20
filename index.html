@@ -543,6 +543,7 @@
         <img
           src="https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c39c3d7dde9ad9c0f0576c.jpeg"
           class="bio-img"
+          alt="Dennis Calvert"
         />
         <div
           style="
@@ -617,6 +618,7 @@
         <img
           src="https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c40e7cb73e51c306f85343.jpeg"
           class="bio-img"
+          alt="Dennis Calvert Light Painting"
         />
       </section>
     </main>
@@ -672,6 +674,18 @@
               alert("An error occurred while sending the message.");
             });
         });
+
+      var images = document.querySelectorAll(".grid-item");
+
+      images.forEach((item) => {
+        item.addEventListener("click", function () {
+          if (!item.classList.contains("enlarged")) {
+            item.classList.add("enlarged");
+          } else {
+            item.classList.remove("enlarged");
+          }
+        });
+      });
     </script>
   </body>
 </html>
