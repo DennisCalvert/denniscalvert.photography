@@ -126,7 +126,7 @@ document
     const formData = new FormData(this);
     const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-    fetch("/submit", {
+    fetch("https://base-api-ts.herokuapp.com/mail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
