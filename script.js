@@ -18,51 +18,51 @@ document
     }
   });
 
-window.addEventListener("load", adjustImageSizes);
-window.addEventListener("resize", adjustImageSizes);
+// window.addEventListener("load", adjustImageSizes);
+// window.addEventListener("resize", adjustImageSizes);
 
 // function isLandscape(width, height) {
 //   return width > height;
 // }
 
-function getAspectRatio(img) {
-  if (!img || !img.naturalHeight || !img.naturalWidth) {
-    return 3;
-  }
+// function getAspectRatio(img) {
+//   if (!img || !img.naturalHeight || !img.naturalWidth) {
+//     return 3;
+//   }
 
-  return img.naturalWidth / img.naturalHeight;
-}
+//   return img.naturalWidth / img.naturalHeight;
+// }
 
-function adjustImageSizes() {
-  const gridItems = document.querySelectorAll(".grid-item");
-  // loop, check next
+// function adjustImageSizes() {
+//   const gridItems = document.querySelectorAll(".grid-item");
+//   // loop, check next
 
-  gridItems.forEach((item, index) => {
-    const img = item.querySelector("img");
+//   gridItems.forEach((item, index) => {
+//     const img = item.querySelector("img");
 
-    // var c = isLandscape(img.naturalWidth, img.naturalHeight);
+//     // var c = isLandscape(img.naturalWidth, img.naturalHeight);
 
-    const aspectRatio = getAspectRatio(img);
+//     const aspectRatio = getAspectRatio(img);
 
-    item.style.flex = `1 1 ${200 * aspectRatio}px`;
-  });
-  var grids = Array.from(document.getElementsByClassName("grid"));
-  grids.forEach((grid) => {
-    grid.classList.add("visible");
-  });
-}
+//     item.style.flex = `1 1 ${200 * aspectRatio}px`;
+//   });
+//   var grids = Array.from(document.getElementsByClassName("grid"));
+//   grids.forEach((grid) => {
+//     grid.classList.add("visible");
+//   });
+// }
 
-var images = document.querySelectorAll(".grid-item");
+// var images = document.querySelectorAll(".grid-item");
 
-images.forEach((item) => {
-  item.addEventListener("click", function () {
-    if (!item.classList.contains("enlarged")) {
-      item.classList.add("enlarged");
-    } else {
-      item.classList.remove("enlarged");
-    }
-  });
-});
+// images.forEach((item) => {
+//   item.addEventListener("click", function () {
+//     if (!item.classList.contains("enlarged")) {
+//       item.classList.add("enlarged");
+//     } else {
+//       item.classList.remove("enlarged");
+//     }
+//   });
+// });
 
 // function createSlideShow(currentItem) {
 //   const images = Array.from(currentItem.parentNode.children);
