@@ -146,48 +146,48 @@ document
       });
   });
 
-var headShotImages = [
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0df9aa8b583850f1643a.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0df3aa8b583850f16439.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0e71c444babeedbe6784.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0e75c444babeedbe6785.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0e78c444babeedbe6788.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c36edb4259af8fa94ad7f5.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3b04fa45bc8f8b82a7fea.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0e77c444babeedbe6787.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3b11ca45bc8f8b82a7feb.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a03a7dde9ad9c0f0576d.jpeg",
-];
+// var headShotImages = [
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0df9aa8b583850f1643a.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0df3aa8b583850f16439.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0e71c444babeedbe6784.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0e75c444babeedbe6785.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0e78c444babeedbe6788.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c36edb4259af8fa94ad7f5.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3b04fa45bc8f8b82a7fea.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0e77c444babeedbe6787.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3b11ca45bc8f8b82a7feb.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a03a7dde9ad9c0f0576d.jpeg",
+// ];
 
-var creatorsGallery = [
-  // "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a03a7dde9ad9c0f0576d.jpeg",
+// var creatorsGallery = [
+//   // "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a03a7dde9ad9c0f0576d.jpeg",
 
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a12f7dde9ad9c0f05770.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a1477dde9ad9c0f05771.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a1b07dde9ad9c0f05773.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a08b7dde9ad9c0f0576f.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a1d17dde9ad9c0f05774.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a3c07dde9ad9c0f05775.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a0707dde9ad9c0f0576e.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3b042a45bc8f8b82a7fe9.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c4024b3416266a800cb604.jpeg",
-  "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3ae16a45bc8f8b82a7fe7.jpeg",
-];
-function buildGallery(galleryImages, targetId) {
-  var gallery = document.getElementById(targetId);
-  var frag = document.createDocumentFragment();
-  galleryImages.forEach((url) => {
-    var div = document.createElement("div");
-    div.classList.add("grid-item");
-    var img = document.createElement("img");
-    img.src = url;
-    div.appendChild(img);
-    frag.appendChild(div);
-  });
-  gallery.appendChild(frag);
-}
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a12f7dde9ad9c0f05770.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a1477dde9ad9c0f05771.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a1b07dde9ad9c0f05773.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a08b7dde9ad9c0f0576f.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a1d17dde9ad9c0f05774.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a3c07dde9ad9c0f05775.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a0707dde9ad9c0f0576e.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3b042a45bc8f8b82a7fe9.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c4024b3416266a800cb604.jpeg",
+//   "https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3ae16a45bc8f8b82a7fe7.jpeg",
+// ];
+// function buildGallery(galleryImages, targetId) {
+//   var gallery = document.getElementById(targetId);
+//   var frag = document.createDocumentFragment();
+//   galleryImages.forEach((url) => {
+//     var div = document.createElement("div");
+//     div.classList.add("grid-item");
+//     var img = document.createElement("img");
+//     img.src = url;
+//     div.appendChild(img);
+//     frag.appendChild(div);
+//   });
+//   gallery.appendChild(frag);
+// }
 
-(function () {
-  buildGallery(headShotImages, "headshots");
-  buildGallery(creatorsGallery, "creators");
-})();
+// (function () {
+//   buildGallery(headShotImages, "headshots");
+//   buildGallery(creatorsGallery, "creators");
+// })();
