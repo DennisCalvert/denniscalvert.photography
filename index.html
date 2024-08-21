@@ -124,12 +124,13 @@
         justify-content: center;
         max-width: 1200px;
         margin: 0 auto;
-        opacity: 0;
+        /* opacity: 0; */
         transition: all 1s;
       }
 
       .visible {
         opacity: 1;
+        display: block;
       }
 
       .grid-item {
@@ -142,7 +143,7 @@
         width: 100%;
         height: auto;
         display: block;
-        transition: transform 0.3s ease;
+        transition: transform 0.1s ease;
       }
 
       .grid-item:hover img {
@@ -284,6 +285,7 @@
       #contact p {
         max-width: 100%;
       }
+
       form {
         max-width: 600px;
         margin: 0 auto;
@@ -347,6 +349,147 @@
       .bio-img {
         width: 100%;
       }
+
+      .hidden {
+        display: none;
+      }
+
+      /* LOADING CSS */
+      #loading {
+        margin: 0 auto;
+        position: relative;
+        border-radius: 3px;
+        width: 100%;
+        max-width: 200px;
+      }
+      #loading:after {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+      #loading .loading-box {
+        position: absolute;
+        width: 100%;
+        border-radius: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        top: 50%;
+        border-bottom: 1em solid #3d8fa1;
+        transform-origin: center;
+      }
+      #loading .loading-box:after {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+
+      @-webkit-keyframes step0 {
+        0% {
+          opacity: 0.1;
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          opacity: 0.9;
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+
+      @keyframes step0 {
+        0% {
+          opacity: 0.1;
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          opacity: 0.9;
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+      #loading .loading-box.lb0 {
+        -webkit-animation: step0 1s infinite alternate;
+        animation: step0 1s infinite alternate;
+        width: 100%;
+      }
+
+      @-webkit-keyframes step1 {
+        25% {
+          opacity: 0.1;
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          opacity: 0.9;
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+
+      @keyframes step1 {
+        25% {
+          opacity: 0.1;
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          opacity: 0.9;
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+      #loading .loading-box.lb1 {
+        -webkit-animation: step1 1s infinite alternate;
+        animation: step1 1s infinite alternate;
+        width: 75%;
+      }
+
+      @-webkit-keyframes step2 {
+        50% {
+          opacity: 0.1;
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          opacity: 0.9;
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+
+      @keyframes step2 {
+        50% {
+          opacity: 0.1;
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          opacity: 0.9;
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+      #loading .loading-box.lb2 {
+        -webkit-animation: step2 1s infinite alternate;
+        animation: step2 1s infinite alternate;
+        width: 50%;
+      }
+
+      @-webkit-keyframes step3 {
+        75% {
+          opacity: 0.1;
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          opacity: 0.9;
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+
+      @keyframes step3 {
+        75% {
+          opacity: 0.1;
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          opacity: 0.9;
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+      #loading .loading-box.lb3 {
+        -webkit-animation: step3 1s infinite alternate;
+        animation: step3 1s infinite alternate;
+        width: 25%;
+      }
     </style>
   </head>
   <body>
@@ -388,7 +531,7 @@
       <section id="gallery" class="gallery">
         <h2>Studio Headshots</h2>
         <h3>Actors and Professionals</h3>
-        <div class="grid visible" id="headshots">
+        <div class="grid" id="headshots">
           <div class="grid-item" style="flex: 1 1 299.5px">
             <img
               src="https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66ac0df9aa8b583850f1643a.jpeg"
@@ -452,7 +595,7 @@
         </div>
         <h2>Environmental Portriats</h2>
         <h3>Artists & Musicians</h3>
-        <div class="grid visible" id="creators">
+        <div class="grid" id="creators">
           <div class="grid-item" style="flex: 1 1 299.833px">
             <img
               src="https://magiccityfilmmakers.s3.us-east-2.amazonaws.com/galleries/66ac0d64aa8b583850f16438/images/l/66c3a12f7dde9ad9c0f05770.jpeg"
@@ -538,6 +681,26 @@
 
           <button type="submit">Send</button>
         </form>
+        <div id="loading" class="hidden">
+          <div class="loading-box lb0"></div>
+          <div class="loading-box lb1"></div>
+          <div class="loading-box lb2"></div>
+          <div class="loading-box lb3"></div>
+        </div>
+        <div
+          id="contact-success"
+          class="hidden"
+          style="
+            text-align: left;
+            font-size: 1.2em;
+            padding: 20px 0;
+            max-width: 600px;
+            margin: 0 auto;
+          "
+        >
+          Thanks for reaching out! Check your inbox for an info sheet and I will
+          be personally following up soon.
+        </div>
       </section>
       <section id="about">
         <img
@@ -650,6 +813,8 @@
       document
         .getElementById("contact-form")
         .addEventListener("submit", function (event) {
+          document.getElementById("contact-form").classList.add("hidden");
+          document.getElementById("loading").classList.remove("hidden");
           event.preventDefault(); // Prevent the default form submission
 
           const formData = new FormData(this);
@@ -664,7 +829,11 @@
           })
             .then((response) => {
               if (response.ok) {
-                alert("Message sent successfully!");
+                // alert("Message sent successfully!");
+                document.getElementById("loading").classList.add("hidden");
+                document
+                  .getElementById("contact-success")
+                  .classList.remove("hidden");
               } else {
                 alert("Failed to send message.");
               }
