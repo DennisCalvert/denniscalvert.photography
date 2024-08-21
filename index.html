@@ -93,7 +93,7 @@
       .menu-icon .bar {
         width: 25px;
         height: 3px;
-        background-color: #333;
+        background-color: #1bc5e9;
         margin: 4px 0;
       }
 
@@ -225,8 +225,17 @@
           text-align: center;
         }
 
+        nav ul li a {
+          color: #fff;
+          display: block;
+        }
+
         .menu-icon {
           display: flex;
+        }
+
+        #nav-links {
+          background-color: #000000;
         }
       }
 
@@ -796,6 +805,14 @@
             navLinks.style.display = "none";
           } else {
             navLinks.style.display = "flex";
+          }
+        });
+
+      document
+        .getElementById("nav-links")
+        .addEventListener("click", function () {
+          if (window.innerWidth < 770) {
+            document.getElementById("nav-links").style.display = "none";
           }
         });
 
