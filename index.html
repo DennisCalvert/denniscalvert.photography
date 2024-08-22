@@ -805,6 +805,8 @@
           localStorage.setItem("id", id);
         }
 
+        var sessionStart = new Date().toISOString();
+
         function sendData() {
           fetch("https://base-api-ts.herokuapp.com/sauron", {
             method: "POST",
@@ -812,7 +814,7 @@
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              sesionStart: new Date().toISOString(),
+              sesionStart: sessionStart,
               userId: localStorage.getItem("id"),
               pathName: window.location.href,
               prevPathName: "",
