@@ -8,21 +8,6 @@
       content="Photography by Dennis Calvert. Serving Birmingham, Alabama."
     />
     <title>Dennis Calvert Photography</title>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-WVWPQN67");
-    </script>
-    <!-- End Google Tag Manager -->
-
     <style>
       * {
         box-sizing: border-box;
@@ -41,7 +26,6 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
-        /* background-color: #f8f8f8; */
         border-bottom: 1px solid #e7e7e7;
         max-width: 1200px;
         margin: 0 auto;
@@ -138,7 +122,6 @@
         justify-content: center;
         max-width: 1200px;
         margin: 0 auto;
-        /* opacity: 0; */
         transition: all 1s;
       }
 
@@ -219,12 +202,7 @@
         nav ul {
           flex-direction: column;
           display: none;
-          /* position: absolute; */
-          /* top: 60px; */
-          /* right: 20px; */
           background-color: #f8f8f8;
-          /* width: 200px; */
-          /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
           position: fixed;
           top: 0;
           left: 0;
@@ -252,8 +230,6 @@
           background-color: #000000;
         }
       }
-
-      /* Your CSS styles remain unchanged */
 
       .grid-item.enlarged {
         position: fixed;
@@ -516,16 +492,6 @@
     </style>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-WVWPQN67"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <header>
       <h1>Dennis Calvert</h1>
       <nav>
@@ -819,12 +785,47 @@
       </section>
     </main>
     <footer>&copy; 2024 Dennis Calvert</footer>
-    <!-- <div id="image-viewer" class="grid-item">
-      <img src="" id="image-viewer-tag" />
-    </div> -->
-    <!-- <script src="./script.js"></script> -->
     <div id="preloadImages"></div>
     <script>
+      // analytics
+      (function () {
+        var startTime = new Date();
+
+        function getTimeInApp() {
+          var timeDiff = new Date() - startTime; //in ms
+          // strip the ms
+          timeDiff /= 1000;
+          // get seconds
+          var seconds = Math.round(timeDiff);
+          return seconds;
+        }
+
+        if (!localStorage.getItem("id")) {
+          var id = "id" + Math.random().toString(16).slice(2);
+          localStorage.setItem("id", id);
+        }
+
+        function sendData() {
+          fetch("https://base-api-ts.herokuapp.com/sauron", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              sesionStart: new Date().toISOString(),
+              userId: localStorage.getItem("id"),
+              pathName: window.location.href,
+              prevPathName: "",
+              pathDateTime: "",
+              timeInApp: getTimeInApp(),
+            }),
+          });
+        }
+
+        window.setInterval(sendData, 10000);
+        sendData();
+      })();
+
       document
         .getElementById("menu-icon")
         .addEventListener("click", function () {
@@ -897,7 +898,7 @@
             "images/s",
             "images/l"
           );
-          // document.getElementById("image-viewer").classList.toggle("enlarged");
+
           if (!item.classList.contains("enlarged")) {
             item.classList.add("enlarged");
           } else {
